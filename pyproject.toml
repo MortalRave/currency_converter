@@ -7,7 +7,9 @@ authors = [
     { name = "Jan", email = "89805433+MortalRave@users.noreply.github.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "flask>=3.1.3",
+]
 
 [project.scripts]
 currency-converter = "currency_converter:main"

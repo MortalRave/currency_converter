@@ -9,7 +9,7 @@ class CurrencyConverter:
             'CZK': 0.18}
 
     def convert(self, amount, target_currency):
-        return amount / self.rates[target_currency]
+        return round(amount / self.rates[target_currency], 2)
 
 calculator = CurrencyConverter()
 print(calculator.convert(250,'EUR'))
