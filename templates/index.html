@@ -6,7 +6,6 @@
 </head>
 <body>
     <h1>Przelicz swoje PLN</h1>
-    <!-- Formularz wyśle dane metodą POST pod adres główny '/' -->
     <form action="/" method="POST">
         
         <label>Kwota w PLN:</label>
@@ -23,5 +22,9 @@
         
         <button type="submit">Przelicz</button>
     </form>
+    {% if result %}
+        <h3>Aktualny kurs {{ target_currency }}: {{ currency_rate }} PLN</h3>
+        <h2>Otrzymasz: {{ result }}</h2>
+    {% endif %}
 </body>
 </html>
