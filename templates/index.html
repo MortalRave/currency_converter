@@ -24,7 +24,7 @@
     </form>
     {% if result %}
         <h3>Aktualny kurs {{ target_currency }}: {{ currency_rate }} PLN</h3>
-        <h2>Otrzymasz: {{ result }}</h2>
+        <h2>Otrzymasz: {{ result }} {{ target_currency }}</h2>
     {% endif %}
 </body>
 </html>
