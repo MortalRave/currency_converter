@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 0 auto; /* To wyśrodkuje formularz */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Dodajemy delikatny cień dla profesjonalnego efektu! */
+}
