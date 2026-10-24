@@ -22,10 +22,12 @@
         </select>
         
         <button type="submit">Przelicz</button>
+        <a href="/" style="display: inline-block; margin-top: 15px; color: #007bff; text-decoration: none;">&larr; Powrót do menu</a>
     </form>
     {% if result %}
         <h3>Aktualny kurs {{ target_currency }}: {{ currency_rate }} PLN</h3>
         <h2>Otrzymasz: {{ result }} {{ target_currency }}</h2>
     {% endif %}
+    
 </body>
 </html>

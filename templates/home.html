@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wybierz Kalkulator</title>
+    <!-- Podpinamy nasz plik CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Dodatkowy drobny styl tylko dla linków na stronie głównej, żeby wyglądały jak przyciski */
+        .menu-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .menu-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form style="width: 400px;">
+        <h1>Witaj w Multikalkulatorze!</h1>
+        <p>Wybierz narzędzie, z którego chcesz skorzystać:</p>
+        
+        <a href="/currency" class="menu-button">Kalkulator Walut</a>
+        <a href="/bmi" class="menu-button">Kalkulator BMI</a>
+        <a href="/calculator" class="menu-button">Kalkulator Prosty</a>
+    </form>
+</body>
+</html>
