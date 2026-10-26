@@ -11,16 +11,16 @@
         
         <label>Twoja waga (w kg):</label>
         <input type="text" name="weight" required>
-        
+        <br>
         <label>Twój wzrost (w cm):</label>
         <input type="text" name="height" required>
-        
+        <br>
         <button type="submit">Oblicz BMI</button>
 
         <!-- Sekcja wyświetlania wyniku -->
         {% if result %}
             <hr style="margin: 20px 0;">
-            <h2>Twoje BMI wynosi: {{ bmi }}</h2>
+            <h2>Twoje BMI wynosi: {{ result }}</h2>
             <h3>Status: {{ status }}</h3>
         {% endif %}
         
