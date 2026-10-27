@@ -10,7 +10,7 @@
     <form action="/currency" method="POST">
     <h1>Przelicz swoje PLN</h1>    
         <label>Kwota w PLN:</label>
-        <input type="text" name="amount">
+        <input type="number" name="amount" step="any" min="0" required> 
         <br>
         <label>Wybierz walutę:</label>
         <select name="currency">

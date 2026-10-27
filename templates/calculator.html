@@ -46,8 +46,10 @@
         .calc-btn.operator:hover { background-color: #e67e22; }
         .calc-btn.equal { background-color: #27ae60; color: white; grid-column: span 2; }
         .calc-btn.equal:hover { background-color: #2ecc71; }
-        .calc-btn.clear { background-color: #c0392b; color: white; grid-column: span 3; }
+        .calc-btn.clear { background-color: #c0392b; color: white; grid-column: span 1; }
         .calc-btn.clear:hover { background-color: #e74c3c; }
+        .calc-btn.backspace { background-color: #f39c12; color: white; grid-column: span 2; }
+        .calc-btn.backspace:hover { background-color: #e67e22; }
     </style>
 </head>
 <body>
@@ -62,7 +64,9 @@
             <input type="hidden" name="expression" id="hiddenExpression" value="">
             
             <div class="button-grid">
+                <button type="button" class="calc-btn backspace" onclick="backspace()">⬅</button>                
                 <button type="button" class="calc-btn clear" onclick="clearScreen()">C</button>
+
                 <button type="button" class="calc-btn operator" onclick="addOperator(' / ')">&divide;</button>
                 
                 <button type="button" class="calc-btn" onclick="addNumber('7')">7</button>
@@ -114,6 +118,10 @@
         function submitForm() {
             // Zapisujemy całe równanie do ukrytego pola przed wysłaniem do Pythona
             hiddenInput.value = currentExpression;
+        }
+        function backspace() {
+            currentExpression = currentExpression.slice(0, -1);
+             updateScreen();
         }
     </script>
 </body>

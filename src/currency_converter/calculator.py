@@ -4,3 +4,5 @@ class Calculator:
             return eval(expression)
         except ZeroDivisionError:
             return "ERROR"
+        except:
+            return "ERROR"
